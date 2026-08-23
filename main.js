@@ -803,6 +803,7 @@ class SoundManager {
   }
   hover() { this.playTone(800,'sine',.05,.05); }
   click() { this.playTone(400,'sine',.15,.1); }
+  termEnter() { this.playTone(300,'triangle',.1,.08); }
   navSweep() {
     if (!this.enabled||!this.ctx) return;
     const o=this.ctx.createOscillator(), g=this.ctx.createGain();
@@ -813,6 +814,7 @@ class SoundManager {
 }
 const sm = new SoundManager();
 document.addEventListener('click', () => sm.init(), { once: true });
+document.addEventListener('keydown', () => sm.init(), { once: true });
 const soundToggle = document.getElementById('sound-toggle');
 if (soundToggle) {
   soundToggle.addEventListener('click', e => {
@@ -830,3 +832,93 @@ document.querySelectorAll('a, button, .proj-card, .skill-box').forEach(el => {
 document.querySelectorAll('a, button:not(.nav-open-btn):not(.nav-close-btn):not(#sound-toggle)').forEach(el => el.addEventListener('click', () => sm.click()));
 navOpenBtn?.addEventListener('click',  () => sm.navSweep());
 navCloseBtn?.addEventListener('click', () => sm.navSweep());
+
+// ════ TERMINAL ════════════════════════════════════════════════
+const termBtn = document.getElementById('terminal-btn');
+const termModal = document.getElementById('terminal-modal');
+const termClose = document.getElementById('term-close');
+const termBody = document.getElementById('term-body');
+const termInput = document.getElementById('term-input');
+
+function toggleTerminal() {
+  termModal.classList.toggle('open');
+  if (termModal.classList.contains('open')) {
+    setTimeout(() => termInput.focus(), 100);
+  } else {
+    termInput.blur();
+  }
+}
+
+termBtn?.addEventListener('click', toggleTerminal);
+termClose?.addEventListener('click', toggleTerminal);
+
+// Toggle terminal with backtick (`)
+document.addEventListener('keydown', e => {
+  if (e.key === '`') {
+    e.preventDefault();
+    toggleTerminal();
+  }
+});
+
+// Terminal commands logic
+const COMMANDS = {
+  help: () => `Available commands:
+  - <b>about</b>: Learn more about me.
+  - <b>skills</b>: View my technical skills.
+  - <b>projects</b>: Check out my work.
+  - <b>contact</b>: Get my contact information.
+  - <b>resume</b>: View or download my resume.
+  - <b>clear</b>: Clear the terminal.`,
+  about: () => `I am K. Mani Vignesh, a Full-Stack Developer & AI-ML Engineer studying at Amrita Vishwa Vidyapeetham.`,
+  skills: () => `Languages: Python, Java, JavaScript, SQL
+Web: React, Node.js, Express, Django, HTML/CSS
+AI/ML: Scikit-learn, TensorFlow, PyTorch, YOLO
+Databases: MongoDB, SQL, Oracle
+Cloud: AWS, Docker, Git`,
+  projects: () => `My featured projects include:
+- YuktiJobs (Job Portal)
+- Zero Waste (Food Donation Platform)
+- GrievAI (Grievance NLP System)
+- AgriFusionNet (Paddy Disease Detection)
+...and more! Type 'help' for other commands.`,
+  contact: () => `Email: kmvignesh2005@gmail.com
+LinkedIn: mani-vignesh-kothuri
+GitHub: kmanivignesh`,
+  resume: () => `You can view or download my resume here: <a href="Mani_Vignesh_Resume.pdf" target="_blank" style="color: var(--cyan); text-decoration: underline;">Mani_Vignesh_Resume.pdf</a>`,
+  clear: () => {
+    termBody.innerHTML = '';
+    return null;
+  }
+};
+
+termInput?.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    if (typeof sm !== 'undefined') sm.termEnter();
+    const val = termInput.value.trim();
+    termInput.value = '';
+
+    // Echo input
+    const echoLine = document.createElement('div');
+    echoLine.className = 'term-line';
+    echoLine.innerHTML = `<span class="term-prompt">visitor@mani-portfolio:~$</span> ${val}`;
+    termBody.appendChild(echoLine);
+
+    if (val) {
+      const cmd = val.toLowerCase();
+      const res = document.createElement('div');
+      res.className = 'term-line';
+      
+      if (COMMANDS[cmd]) {
+        const out = COMMANDS[cmd]();
+        if (out !== null) {
+          res.innerHTML = out.replace(/\n/g, '<br>');
+          termBody.appendChild(res);
+        }
+      } else {
+        res.innerHTML = `<span class="term-err">Command not found: ${val}. Type 'help' to see available commands.</span>`;
+        termBody.appendChild(res);
+      }
+    }
+    termBody.scrollTop = termBody.scrollHeight;
+  }
+});
