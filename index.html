@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K. Mani Vignesh | Full-Stack & AI/ML Developer</title>
+  <meta name="description" content="Portfolio of K. Mani Vignesh — B.Tech CSE (AI), Amrita Vishwa Vidyapeetham. Full-Stack Developer & AI/ML Engineer with 2 IEEE publications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="nav-closed">
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="pl-inner">
+      <div class="pl-hex-wrap">
+        <svg viewBox="0 0 100 100" width="70" height="70">
+          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" stroke="#00d4ff" stroke-width="1.5" fill="none" class="pl-poly"/>
+          <text x="50" y="57" text-anchor="middle" fill="#00d4ff" font-family="Space Mono" font-size="20" font-weight="700">MV</text>
+        </svg>
+      </div>
+      <div class="pl-bar-track"><div class="pl-bar-fill" id="pl-bar"></div></div>
+      <p class="pl-pct"><span id="pl-num">0</span>%</p>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAVIGATION -->
+  <button id="nav-open-btn" class="nav-open-btn">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="nav">
+    <div class="nav-header">
+      <a class="nav-logo" href="#hero">K. MANI VIGNESH</a>
+      <button id="nav-close-btn" class="nav-close-btn">✕</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-footer">
+      <a class="nav-gh" href="https://github.com/kmanivignesh" target="_blank" id="nav-github">GitHub ↗</a>
+    </div>
+    <button class="hamburger" id="ham"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-menu" id="mob-menu">
+    <button class="mob-close" id="mob-close">✕</button>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════ -->
+  <main class="main-content">
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <!-- Overlay to dim canvas so text is readable -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-kicker" id="hk">B.Tech CSE (AI) &nbsp;·&nbsp; Amrita Vishwa Vidyapeetham &nbsp;·&nbsp; CGPA 8.87/10</p>
+      <h1 class="hero-name" id="hn">
+        <span class="hn-first" id="hn1">K. Mani</span>
+        <span class="hn-last" id="hn2">Vignesh</span>
+      </h1>
+      <p class="hero-role" id="hr">Full-Stack Developer &nbsp;/&nbsp; AI-ML Engineer &nbsp;/&nbsp; IEEE Author</p>
+      <div class="hero-btns" id="hb">
+        <a href="#projects" class="btn-primary" id="hero-view-btn">View My Work</a>
+        <a href="Mani_Vignesh_Resume.pdf" target="_blank" class="btn-outline" id="hero-resume-btn">See Resume 📄</a>
+        <a href="mailto:kmvignesh2005@gmail.com" class="btn-outline" id="hero-contact-btn">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-stats" id="hs-wrap">
+      <div class="hstat"><span class="hstat-n" data-to="8.87" data-dec="2">0.00</span><small>CGPA / 10</small></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-n" data-to="2">0</span><small>IEEE PAPERS</small></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-n" data-to="10">0</span><small>PROJECTS</small></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat"><span class="hstat-n" data-to="3">0</span><small>CERTIFICATIONS</small></div>
+      <div class="hstat-sep"></div>
+      <div class="hstat lc-stat">
+        <a href="https://leetcode.com/u/mani_vignesh/" target="_blank" class="lc-link" id="hero-leetcode-stat">
+          <span class="hstat-n lc-num" data-to="150" data-dec="0">0</span>
+          <small>LEETCODE SOLVED</small>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <span>SCROLL</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════ -->
+  <section id="about">
+    <canvas id="about-canvas"></canvas>
+    <div class="container">
+      <div class="sec-eyebrow">// 01 — About Me</div>
+      <div class="about-grid">
+        <!-- LEFT -->
+        <div class="about-left">
+          <h2 class="sec-title">Building the <span class="accent">Future</span><br/>with Code & AI</h2>
+          <p class="about-bio">I am <strong>K. Mani Vignesh</strong>, a final-year Computer Science Engineering (AI) student at <strong>Amrita Vishwa Vidyapeetham, Bengaluru</strong> (CGPA: 8.87/10). I build intelligent, scalable full-stack applications that bridge cutting-edge AI research and real-world impact.</p>
+          <p class="about-bio">I have developed job portals, food-donation platforms, IoT dashboards, and published two research papers at IEEE conferences. I am driven by a desire to solve real problems with elegant, production-ready solutions.</p>
+          <div class="tags">
+            <span>📍 Bengaluru, India</span>
+            <span>🎓 B.Tech CSE (AI) — 2027</span>
+            <span>📄 IEEE INSPECT 2025</span>
+            <span>📄 EAI IC4S 2025</span>
+            <span>📞 +91 6281400311</span>
+          </div>
+          <div class="about-ctas">
+            <a href="https://linkedin.com/in/mani-vignesh-kothuri-5b3010321" target="_blank" class="icon-link" id="about-linkedin">LinkedIn ↗</a>
+            <a href="https://github.com/kmanivignesh" target="_blank" class="icon-link" id="about-github">GitHub ↗</a>
+            <a href="https://leetcode.com/u/mani_vignesh/" target="_blank" class="icon-link" id="about-leetcode">LeetCode ↗</a>
+          </div>
+
+        </div>
+        <!-- RIGHT: Education + Certs -->
+        <div class="about-right">
+          <h3 class="subsection-label">🎓 Education</h3>
+          <div class="timeline">
+            <div class="tl-row">
+              <div class="tl-dot"></div>
+              <div class="tl-info">
+                <span class="tl-date">Jun 2023 – Present</span>
+                <h4>B.Tech CSE (Artificial Intelligence)</h4>
+                <p>Amrita Vishwa Vidyapeetham, Bengaluru &nbsp;·&nbsp; <strong class="accent">CGPA: 8.87 / 10</strong></p>
+              </div>
+            </div>
+            <div class="tl-row">
+              <div class="tl-dot"></div>
+              <div class="tl-info">
+                <span class="tl-date">Jun 2021 – Jun 2023</span>
+                <h4>Intermediate — BIEAP</h4>
+                <p>FIITJEE, Vijayawada &nbsp;·&nbsp; <strong class="accent">95.5%</strong></p>
+              </div>
+            </div>
+            <div class="tl-row">
+              <div class="tl-dot"></div>
+              <div class="tl-info">
+                <span class="tl-date">Jun 2021</span>
+                <h4>Secondary — BSEAP</h4>
+                <p>Modern High School, Chilakaluripet &nbsp;·&nbsp; <strong class="accent">100%</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="subsection-label" style="margin-top:2.5rem">⚡ Coding Profile</h3>
+          <!-- LeetCode Card -->
+          <a href="https://leetcode.com/u/mani_vignesh/" target="_blank" class="lc-card" id="about-lc-card" style="margin-top: 1rem;">
+            <div class="lc-card-header">
+              <span class="lc-logo">⚡</span>
+              <span class="lc-title">LeetCode</span>
+              <span class="lc-handle">@mani_vignesh</span>
+            </div>
+            <div class="lc-stats-row">
+              <div class="lc-stat-box easy">
+                <span class="lc-count easy-c">~50</span>
+                <span class="lc-diff">Easy</span>
+              </div>
+              <div class="lc-stat-box med">
+                <span class="lc-count med-c">~80</span>
+                <span class="lc-diff">Medium</span>
+              </div>
+              <div class="lc-stat-box hard">
+                <span class="lc-count hard-c">~20</span>
+                <span class="lc-diff">Hard</span>
+              </div>
+              <div class="lc-stat-box total">
+                <span class="lc-count total-c">150+</span>
+                <span class="lc-diff">Total</span>
+              </div>
+            </div>
+            <div class="lc-footer">View Profile ↗</div>
+          </a>
+
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SKILLS SECTION
+  ══════════════════════════════════════════ -->
+  <section id="skills">
+    <canvas id="skills-canvas"></canvas>
+    <div class="container">
+      <div class="sec-eyebrow">// 02 — Technical Skills</div>
+      <h2 class="sec-title">My <span class="accent">Tech Stack</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-box">
+          <div class="sb-icon">⚙️</div>
+          <h3>Languages</h3>
+          <div class="pills"><span>Python</span><span>Java</span><span>JavaScript</span><span>SQL</span></div>
+        </div>
+
+        <div class="skill-box">
+          <div class="sb-icon">🌐</div>
+          <h3>Web Technologies</h3>
+          <div class="pills"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>Django</span><span>HTML5</span><span>CSS3</span><span>REST APIs</span><span>JWT</span></div>
+        </div>
+
+        <div class="skill-box">
+          <div class="sb-icon">🤖</div>
+          <h3>AI / Machine Learning</h3>
+          <div class="pills"><span>Scikit-learn</span><span>TensorFlow</span><span>PyTorch</span><span>HuggingFace</span><span>OpenCV</span><span>Pandas</span><span>NumPy</span><span>YOLO</span></div>
+        </div>
+
+        <div class="skill-box">
+          <div class="sb-icon">🗄️</div>
+          <h3>Databases</h3>
+          <div class="pills"><span>MongoDB</span><span>SQL</span><span>Oracle</span><span>SQLite</span></div>
+        </div>
+
+        <div class="skill-box">
+          <div class="sb-icon">☁️</div>
+          <h3>Cloud & DevOps</h3>
+          <div class="pills"><span>AWS (Foundations)</span><span>Docker</span><span>Git/GitHub</span><span>Postman</span><span>VS Code</span></div>
+        </div>
+
+        <div class="skill-box">
+          <div class="sb-icon">💡</div>
+          <h3>Core Concepts</h3>
+          <div class="pills"><span>OOP</span><span>DSA</span><span>IoT Systems</span><span>NLP</span><span>Computer Vision</span><span>Explainable AI</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PROJECTS SECTION — Categorized
+  ══════════════════════════════════════════ -->
+  <section id="projects">
+    <canvas id="proj-canvas"></canvas>
+    <div class="container">
+      <div class="sec-eyebrow">// 03 — Projects</div>
+      <h2 class="sec-title">Featured <span class="accent">Work</span></h2>
+
+      <!-- CATEGORY TABS -->
+      <div class="cat-tabs">
+        <button class="cat-tab active" data-cat="all">All</button>
+        <button class="cat-tab" data-cat="fullstack">Full-Stack Web</button>
+        <button class="cat-tab" data-cat="ai">AI / ML</button>
+        <button class="cat-tab" data-cat="iot">IoT</button>
+      </div>
+
+      <!-- ── FULL-STACK PROJECTS ── -->
+      <div class="proj-category">
+        <div class="cat-header">
+          <span class="cat-badge fullstack">🌐 Full-Stack Web</span>
+        </div>
+        <div class="proj-cards-grid">
+
+          <!-- YuktiJobs -->
+          <div class="proj-card" data-cat="fullstack">
+            <div class="pc-top">
+              <div class="pc-num">01</div>
+              <div class="pc-date">Nov 2025</div>
+            </div>
+            <div class="pc-glow cyan"></div>
+            <h3 class="pc-title">YuktiJobs — Job Portal</h3>
+            <p class="pc-desc">A full-stack MERN job portal with live job feeds via RapidAPI. Supports both recruiter and job seeker roles with OTP-based authentication, JWT security, and a skill-based recommendation engine.</p>
+            <ul class="pc-bullets">
+              <li>Live job feeds powered by RapidAPI integration</li>
+              <li>OTP-based authentication + JWT role-based access control</li>
+              <li>Interactive dashboards built with Recharts</li>
+              <li>Skill-based job &amp; course recommendation system</li>
+            </ul>
+            <div class="pc-tech"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>RapidAPI</span><span>JWT</span><span>Recharts</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/yuktijobs-jobportal" target="_blank" class="pc-btn" id="yuktijobs-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- Zero Waste -->
+          <div class="proj-card" data-cat="fullstack">
+            <div class="pc-top">
+              <div class="pc-num">02</div>
+              <div class="pc-date">May 2025</div>
+            </div>
+            <div class="pc-glow green"></div>
+            <h3 class="pc-title">Zero Waste — Food Donation Platform</h3>
+            <p class="pc-desc">A Django-based platform connecting food donors with NGOs to reduce surplus wastage. Includes an ML regression model for urgency scoring and an Explainable AI chatbot for scheduling transparency.</p>
+            <ul class="pc-bullets">
+              <li>Donor–NGO matching with role-based dashboards</li>
+              <li>ML regression model for urgency scores (expiry + quantity)</li>
+              <li>Explainable AI chatbot for pickup scheduling</li>
+              <li>Efficient food redistribution pipeline end-to-end</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>Django</span><span>SQL</span><span>Scikit-learn</span><span>Pandas</span><span>XAI</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/zero_waste_food_donation_system" target="_blank" class="pc-btn" id="zerowaste-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- InfoSphere -->
+          <div class="proj-card" data-cat="fullstack">
+            <div class="pc-top">
+              <div class="pc-num">03</div>
+              <div class="pc-date">2024</div>
+            </div>
+            <div class="pc-glow purple"></div>
+            <h3 class="pc-title">InfoSphere — News Aggregator</h3>
+            <p class="pc-desc">A clean, responsive news aggregator that fetches and displays categorized news from multiple sources using public APIs. Features category filtering, live search, and a card-based layout.</p>
+            <ul class="pc-bullets">
+              <li>Multi-source news aggregation via News APIs</li>
+              <li>Category filtering (Tech, Sports, Business, etc.)</li>
+              <li>Responsive card-based UI with live search</li>
+              <li>Pure HTML, CSS, JavaScript — no frameworks needed</li>
+            </ul>
+            <div class="pc-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>News API</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/news-aggregator-infosphere" target="_blank" class="pc-btn" id="infosphere-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── AI / ML PROJECTS ── -->
+      <div class="proj-category">
+        <div class="cat-header">
+          <span class="cat-badge ai">🤖 AI / Machine Learning</span>
+        </div>
+        <div class="proj-cards-grid">
+
+          <!-- GrievAI -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top">
+              <div class="pc-num">04</div>
+              <div class="pc-date">2024</div>
+            </div>
+            <div class="pc-glow cyan"></div>
+            <h3 class="pc-title">GrievAI — Grievance NLP System</h3>
+            <p class="pc-desc">End-to-end NLP platform that auto-classifies citizen complaints to 8 government departments with ~91% accuracy using fine-tuned DistilBERT trained on 50K Twitter complaints.</p>
+            <ul class="pc-bullets">
+              <li>Fine-tuned DistilBERT on 50K Twitter complaint dataset</li>
+              <li>~91% accuracy across 8 department categories</li>
+              <li>Role-based dashboards for officers and admins</li>
+              <li>Priority flagging &amp; sentiment-based urgency detection</li>
+            </ul>
+            <div class="pc-tech"><span>Flask</span><span>DistilBERT</span><span>PyTorch</span><span>HuggingFace</span><span>SQLite</span><span>Chart.js</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/grievai-nlp" target="_blank" class="pc-btn" id="grievai-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- AgriFusionNet -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top">
+              <div class="pc-num">05</div>
+              <div class="pc-date">2024</div>
+            </div>
+            <div class="pc-glow green"></div>
+            <h3 class="pc-title">AgriFusionNet — Paddy Disease Detection</h3>
+            <p class="pc-desc">Attention-enhanced multi-modal fusion framework classifying 13 paddy leaf disease classes using DenseNet201 + agronomic metadata achieving 89.17% accuracy with Squeeze-and-Excitation attention blocks.</p>
+            <ul class="pc-bullets">
+              <li>DenseNet201 + SE attention for 13-class disease classification</li>
+              <li>Multi-modal fusion of image + agronomic metadata</li>
+              <li>Grad-CAM &amp; SHAP for explainable AI</li>
+              <li>Streamlit web app for farmer accessibility</li>
+            </ul>
+            <div class="pc-tech"><span>TensorFlow</span><span>DenseNet201</span><span>Streamlit</span><span>SHAP</span><span>Grad-CAM</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/AgriFusionNet" target="_blank" class="pc-btn" id="agrifusion-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- Smart Image Cleanup -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top">
+              <div class="pc-num">06</div>
+              <div class="pc-date">2025</div>
+            </div>
+            <div class="pc-glow orange"></div>
+            <div class="pc-ieee-badge">📄 EAI IC4S 2025</div>
+            <h3 class="pc-title">Smart Image Cleanup Tool</h3>
+            <p class="pc-desc">AI-driven image management system using perceptual hashing, Laplacian variance, and face recognition (OpenCV, Dlib) for automated duplicate detection, blur filtering, and organization. Published at EAI IC4S 2025.</p>
+            <ul class="pc-bullets">
+              <li>Perceptual hashing for near-duplicate detection</li>
+              <li>Laplacian variance for blur/quality scoring</li>
+              <li>Face recognition using OpenCV + Dlib</li>
+              <li>Published research — EAI IC4S 2025</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>OpenCV</span><span>Dlib</span><span>Perceptual Hashing</span><span>PIL</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/smart-image-cleanup-tool" target="_blank" class="pc-btn" id="imagecleanup-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- Water Quality Predictor -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top">
+              <div class="pc-num">07</div>
+              <div class="pc-date">2024</div>
+            </div>
+            <div class="pc-glow cyan"></div>
+            <h3 class="pc-title">Water Quality Predictor Pro</h3>
+            <p class="pc-desc">ML pipeline that predicts water potability using multiple classifiers (Random Forest, SVM, XGBoost, Logistic Regression). Features comprehensive EDA, feature engineering, and model comparison with accuracy benchmarks.</p>
+            <ul class="pc-bullets">
+              <li>Multi-model comparison: RF, SVM, XGBoost, LR</li>
+              <li>Feature engineering on 9 water quality parameters</li>
+              <li>Comprehensive EDA with visualizations</li>
+              <li>Best model achieves 95%+ accuracy</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>Pandas</span><span>Matplotlib</span><span>Jupyter</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/Water-Quality-Predictor-Pro" target="_blank" class="pc-btn" id="waterquality-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+          <!-- Groundwater PySpark -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top">
+              <div class="pc-num">07.5</div>
+              <div class="pc-date">2026</div>
+            </div>
+            <div class="pc-glow blue"></div>
+            <h3 class="pc-title">Groundwater Risk Analysis (PySpark)</h3>
+            <p class="pc-desc">Large-scale data analysis pipeline predicting groundwater depletion and contamination risks in vulnerable regions using PySpark. Handles massive geographical datasets for actionable environmental insights.</p>
+            <ul class="pc-bullets">
+              <li>Distributed data processing using PySpark</li>
+              <li>Risk modeling for groundwater depletion and contamination</li>
+              <li>Scalable pipeline for large geographical datasets</li>
+              <li>Data-driven environmental insights</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>PySpark</span><span>Big Data</span><span>Data Analysis</span></div>
+            <div class="pc-links">
+              <a href="https://github.com/kmanivignesh/Groundwater-Depletion-and-Contamination-Risk-in-Vulnerable-Regions-Using-pyspark" target="_blank" class="pc-btn" id="groundwater-gh">GitHub ↗</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── IoT PROJECTS ── -->
+      <div class="proj-category">
+        <div class="cat-header">
+          <span class="cat-badge iot">🔌 IoT + ML</span>
+        </div>
+        <div class="proj-cards-grid">
+
+          <!-- Smart Water Surveillance -->
+          <div class="proj-card featured" data-cat="iot">
+            <div class="pc-top">
+              <div class="pc-num">08</div>
+              <div class="pc-date">May 2025</div>
+            </div>
+            <div class="pc-glow blue"></div>
+            <div class="pc-ieee-badge">🏆 IEEE INSPECT 2025 — ABV-IIITM Gwalior</div>
+            <h3 class="pc-title">Smart Water Surveillance System</h3>
+            <p class="pc-desc">An IoT-based system monitoring water quality in real-time using sensors and ThingSpeak cloud integration. A Random Forest classifier achieves <strong>97.2% accuracy</strong> detecting contamination. Presented at IEEE INSPECT 2025.</p>
+            <ul class="pc-bullets">
+              <li>Multi-node IoT sensor network with ThingSpeak cloud</li>
+              <li>Django dashboard for live parameter visualization &amp; alerts</li>
+              <li>Random Forest model — <strong>97.2% classification accuracy</strong></li>
+              <li>Deployed at critical food-industry water points</li>
+              <li>Published at IEEE INSPECT 2025, ABV-IIITM Gwalior</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>Django</span><span>IoT</span><span>ThingSpeak</span><span>Random Forest</span><span>Scikit-learn</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── MORE PROJECTS ── -->
+      <div class="proj-category">
+        <div class="cat-header">
+          <span class="cat-badge fullstack">⚙️ Systems & Others</span>
+        </div>
+        <div class="proj-cards-grid">
+
+          <!-- NotepadPro -->
+          <div class="proj-card" data-cat="fullstack">
+            <div class="pc-top"><div class="pc-num">09</div><div class="pc-date">2024</div></div>
+            <div class="pc-glow cyan"></div>
+            <h3 class="pc-title">NotepadPro — Huffman Compressor</h3>
+            <p class="pc-desc">A feature-rich Java Swing notepad with built-in Huffman encoding for lossless text compression and FreeTTS for text-to-speech conversion.</p>
+            <ul class="pc-bullets">
+              <li>Huffman encoding / decoding for lossless compression</li>
+              <li>Text-to-speech via FreeTTS integration</li>
+              <li>File open, save, edit operations in Java Swing GUI</li>
+              <li>Compression ratio display and statistics</li>
+            </ul>
+            <div class="pc-tech"><span>Java</span><span>Swing</span><span>Huffman Algorithm</span><span>FreeTTS</span><span>DSA</span></div>
+            <div class="pc-links"><a href="https://github.com/kmanivignesh/notepadpro-huffman" target="_blank" class="pc-btn" id="notepad-gh">GitHub ↗</a></div>
+          </div>
+
+          <!-- Viral Gene Prediction -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top"><div class="pc-num">10</div><div class="pc-date">2025</div></div>
+            <div class="pc-glow purple"></div>
+            <h3 class="pc-title">Viral Gene Prediction</h3>
+            <p class="pc-desc">Bioinformatics deep learning pipeline predicting viral gene functions using Graph Neural Networks (GNN) and DNABERT for DNA sequence encoding and classification.</p>
+            <ul class="pc-bullets">
+              <li>GNN-based architecture for gene relationship modelling</li>
+              <li>DNABERT for DNA sequence tokenization &amp; embeddings</li>
+              <li>Trained on viral genomic datasets</li>
+              <li>Bioinformatics + AI interdisciplinary research project</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>PyTorch</span><span>GNN</span><span>DNABERT</span><span>HuggingFace</span></div>
+            <div class="pc-links"><a href="https://github.com/kmanivignesh" target="_blank" class="pc-btn" id="viral-gh">GitHub ↗</a></div>
+          </div>
+
+          <!-- Workplace Safety -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top"><div class="pc-num">11</div><div class="pc-date">2025</div></div>
+            <div class="pc-glow orange"></div>
+            <h3 class="pc-title">Workplace Safety Detection (YOLO)</h3>
+            <p class="pc-desc">Real-time workplace safety compliance system using YOLOv8 to detect PPE (helmets, vests, gloves) violations in industrial environments with live camera feed integration.</p>
+            <ul class="pc-bullets">
+              <li>YOLOv8 for real-time object detection</li>
+              <li>PPE violation detection — helmets, vests, gloves</li>
+              <li>Live camera feed with bounding box overlays</li>
+              <li>Alert system for safety non-compliance</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>YOLOv8</span><span>OpenCV</span><span>PyTorch</span><span>Computer Vision</span></div>
+            <div class="pc-links"><a href="https://github.com/kmanivignesh" target="_blank" class="pc-btn" id="safety-gh">GitHub ↗</a></div>
+          </div>
+
+          <!-- Telugu Fake Review -->
+          <div class="proj-card" data-cat="ai">
+            <div class="pc-top"><div class="pc-num">12</div><div class="pc-date">2025</div></div>
+            <div class="pc-glow green"></div>
+            <h3 class="pc-title">Telugu Fake Review Detection</h3>
+            <p class="pc-desc">NLP-based system to detect fake/spam reviews written in Telugu using transformer fine-tuning. Handles Indic language-specific challenges like code-mixing and transliteration.</p>
+            <ul class="pc-bullets">
+              <li>Telugu language NLP with multilingual BERT</li>
+              <li>Handles code-mixing and transliteration</li>
+              <li>Binary classification: genuine vs fake reviews</li>
+              <li>Custom tokenizer for Indic script processing</li>
+            </ul>
+            <div class="pc-tech"><span>Python</span><span>mBERT</span><span>HuggingFace</span><span>NLP</span><span>Pandas</span></div>
+            <div class="pc-links"><a href="https://github.com/kmanivignesh" target="_blank" class="pc-btn" id="telugu-gh">GitHub ↗</a></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- View All on GitHub -->
+      <div class="github-cta">
+        <p>Explore all 27+ repositories on GitHub — including Groundwater PySpark Analysis, Facial Emotion Recognition, Resume Shortlisting AI, and more research + coursework projects.</p>
+        <a href="https://github.com/kmanivignesh" target="_blank" class="btn-primary" id="all-repos-btn">View All 27+ Repositories on GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PUBLICATIONS SECTION
+  ══════════════════════════════════════════ -->
+  <section id="publications">
+    <canvas id="pub-canvas"></canvas>
+    <div class="container">
+      <div class="sec-eyebrow">// 04 — Research &amp; Publications</div>
+      <h2 class="sec-title">IEEE <span class="accent">Publications</span></h2>
+      <p class="pub-intro">Two peer-reviewed research papers presented at international IEEE/EAI conferences in 2025.</p>
+
+      <div class="pub-grid">
+
+        <!-- Publication 1 -->
+        <div class="pub-card">
+          <div class="pub-card-inner">
+            <div class="pub-ribbon">IEEE INSPECT 2025</div>
+            <div class="pub-venue-row">
+              <span class="pub-venue-icon">📍</span>
+              <span class="pub-venue-name">ABV-IIITM Gwalior, India</span>
+            </div>
+            <h3 class="pub-title">"Smart Water Surveillance System for Critical Points in Food Industry Using IoT and Machine Learning"</h3>
+            <p class="pub-authors">K. Mani Vignesh et al.</p>
+            <p class="pub-abstract">Developed a multi-node IoT water-quality monitoring system integrated with ThingSpeak cloud for real-time alerting. A Random Forest ML classifier achieves <strong>97.2% accuracy</strong> in detecting water contamination at critical food-industry checkpoints. The system uses a Django-based dashboard for live visualization and anomaly alerts.</p>
+            <div class="pub-highlights">
+              <div class="ph"><span class="ph-num">97.2%</span><span class="ph-label">ML Accuracy</span></div>
+              <div class="ph"><span class="ph-num">Multi</span><span class="ph-label">Node IoT</span></div>
+              <div class="ph"><span class="ph-num">Real-Time</span><span class="ph-label">Monitoring</span></div>
+            </div>
+            <div class="pub-tags"><span>IoT</span><span>Random Forest</span><span>Django</span><span>ThingSpeak</span><span>Water Quality</span><span>ML</span></div>
+          </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="pub-card">
+          <div class="pub-card-inner">
+            <div class="pub-ribbon alt">EAI IC4S 2025</div>
+            <div class="pub-venue-row">
+              <span class="pub-venue-icon">📍</span>
+              <span class="pub-venue-name">International Conference on Smart Systems</span>
+            </div>
+            <h3 class="pub-title">"Smart Image Cleanup Tool: An AI-Driven Solution for Efficient Image Management"</h3>
+            <p class="pub-authors">K. Mani Vignesh et al.</p>
+            <p class="pub-abstract">Built an AI-driven image management system that automates duplicate detection, blur filtering, and intelligent organization. The system combines perceptual hashing for near-duplicate identification, Laplacian variance for blur/sharpness scoring, and face recognition (OpenCV, Dlib) for person-based grouping — enabling efficient large-scale image curation.</p>
+            <div class="pub-highlights">
+              <div class="ph"><span class="ph-num">3</span><span class="ph-label">AI Techniques</span></div>
+              <div class="ph"><span class="ph-num">OpenCV</span><span class="ph-label">Face Recog.</span></div>
+              <div class="ph"><span class="ph-num">Auto</span><span class="ph-label">Organization</span></div>
+            </div>
+            <div class="pub-tags"><span>OpenCV</span><span>Dlib</span><span>Perceptual Hashing</span><span>Face Recognition</span><span>Python</span><span>PIL</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CERTIFICATIONS SECTION
+  ══════════════════════════════════════════ -->
+  <section id="certifications">
+    <canvas id="certifications-canvas"></canvas>
+    <div class="container">
+      <div class="sec-eyebrow">// 04.5 — Continuous Learning</div>
+      <h2 class="sec-title">My <span class="accent">Certifications</span></h2>
+      <p class="pub-intro">Professional certifications validating expertise in Cloud Computing, AI/ML, and Database Management.</p>
+
+      <div class="pub-grid">
+
+        <!-- Google Cloud -->
+        <div class="pub-card">
+          <div class="pub-card-inner">
+            <div class="pub-ribbon">Cybersecurity</div>
+            <div class="pub-venue-row">
+              <span class="pub-venue-icon">☁️</span>
+              <span class="pub-venue-name">Google Cloud</span>
+            </div>
+            <h3 class="pub-title">Career Launchpad Cybersecurity track</h3>
+            <p class="pub-abstract">Successfully completed all courses and labs in the Google Cloud Career Launchpad Cybersecurity track, covering cloud security principles and hands-on threat mitigation.</p>
+            <div class="pub-tags"><span>Google Cloud</span><span>Cybersecurity</span></div>
+          </div>
+        </div>
+
+        <!-- AWS Academy -->
+        <div class="pub-card">
+          <div class="pub-card-inner">
+            <div class="pub-ribbon alt">Cloud</div>
+            <div class="pub-venue-row">
+              <span class="pub-venue-icon">☁️</span>
+              <span class="pub-venue-name">AWS Academy</span>
+            </div>
+            <h3 class="pub-title">Graduate - AWS Academy Cloud Foundations</h3>
+            <p class="pub-abstract">Comprehensive 20-hour cloud fundamentals course covering AWS architecture, services, security, pricing, and support.</p>
+            <div class="pub-tags"><span>AWS</span><span>Cloud Architecture</span></div>
+          </div>
+        </div>
+
+        <!-- Infosys Springboard Full Stack -->
+        <div class="pub-card">
+          <div class="pub-card-inner">
+            <div class="pub-ribbon">Full Stack</div>
+            <div class="pub-venue-row">
+              <span class="pub-venue-icon">💻</span>
+              <span class="pub-venue-name">Infosys Springboard</span>
+            </div>
+            <h3 class="pub-title">Learning Full Stack Development</h3>
+            <p class="pub-abstract">Comprehensive course covering modern front-end and back-end integration to build robust web applications.</p>
+            <div class="pub-tags"><span>Full Stack</span><span>Web Development</span></div>
+          </div>
+        </div>
+
+        <!-- Infosys Springboard -->
+        <div class="pub-card">
+          <div class="pub-card-inner">
+            <div class="pub-ribbon alt">Database</div>
+            <div class="pub-venue-row">
+              <span class="pub-venue-icon">📊</span>
+              <span class="pub-venue-name">Infosys Springboard</span>
+            </div>
+            <h3 class="pub-title">Database Management System (DBMS) & SQL : Complete Pack</h3>
+            <p class="pub-abstract">Rigorous training on database normalization, transactions, and robust data management strategies provided by Infosys.</p>
+            <div class="pub-tags"><span>DBMS</span><span>SQL</span></div>
+          </div>
+        </div>
+
+        <!-- Great Learning -->
+        <div class="pub-card">
+          <div class="pub-card-inner">
+            <div class="pub-ribbon">AI / ML</div>
+            <div class="pub-venue-row">
+              <span class="pub-venue-icon">👁️</span>
+              <span class="pub-venue-name">Great Learning</span>
+            </div>
+            <h3 class="pub-title">Computer Vision Essentials</h3>
+            <p class="pub-abstract">Core concepts and practical implementations of Computer Vision, equipping skills for image processing and recognition tasks.</p>
+            <div class="pub-tags"><span>Computer Vision</span><span>AI</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════ -->
+  <section id="contact">
+    <canvas id="contact-canvas"></canvas>
+    <div class="container">
+      <div class="sec-eyebrow">// 05 — Get In Touch</div>
+      <h2 class="sec-title">Let's <span class="accent">Connect</span></h2>
+      <p class="contact-intro">Open to internships, research collaborations, and exciting full-time opportunities. Let's build something remarkable together.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="mailto:kmvignesh2005@gmail.com" class="c-item" id="c-email">
+            <div class="c-icon">✉</div>
+            <div><span class="c-label">Email</span><span class="c-val">kmvignesh2005@gmail.com</span></div>
+          </a>
+          <a href="tel:+916281400311" class="c-item" id="c-phone">
+            <div class="c-icon">📞</div>
+            <div><span class="c-label">Phone</span><span class="c-val">+91 6281400311</span></div>
+          </a>
+          <a href="https://linkedin.com/in/mani-vignesh-kothuri-5b3010321" target="_blank" class="c-item" id="c-linkedin">
+            <div class="c-icon">in</div>
+            <div><span class="c-label">LinkedIn</span><span class="c-val">mani-vignesh-kothuri</span></div>
+          </a>
+          <a href="https://github.com/kmanivignesh" target="_blank" class="c-item" id="c-github">
+            <div class="c-icon">⌥</div>
+            <div><span class="c-label">GitHub</span><span class="c-val">github.com/kmanivignesh</span></div>
+          </a>
+          <a href="https://leetcode.com/u/mani_vignesh/" target="_blank" class="c-item" id="c-leetcode">
+            <div class="c-icon">⚡</div>
+            <div><span class="c-label">LeetCode</span><span class="c-val">mani_vignesh</span></div>
+          </a>
+        </div>
+
+        <form id="contact-form" class="c-form">
+          <div class="fg">
+            <label for="fname">Your Name</label>
+            <input id="fname" type="text" placeholder="John Doe" required />
+          </div>
+          <div class="fg">
+            <label for="femail">Your Email</label>
+            <input id="femail" type="email" placeholder="john@example.com" required />
+          </div>
+          <div class="fg">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="5" placeholder="Tell me about your opportunity or project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary w100" id="contact-submit">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="foot-wrap">
+      <span class="foot-name">K. Mani Vignesh</span>
+      <span class="foot-copy">© open to work and contribute to projects</span>
+      <div class="foot-socials">
+        <a href="https://github.com/kmanivignesh" target="_blank" id="f-github">GitHub</a>
+        <a href="https://linkedin.com/in/mani-vignesh-kothuri-5b3010321" target="_blank" id="f-linkedin">LinkedIn</a>
+        <a href="https://leetcode.com/u/mani_vignesh/" target="_blank" id="f-leetcode">LeetCode</a>
+      </div>
+    </div>
+  </footer>
+  </main>
+
+  <!-- SOUND TOGGLE -->
+  <button class="sound-toggle" id="sound-toggle" title="Toggle Sound">🔊</button>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
