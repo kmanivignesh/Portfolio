@@ -3,7 +3,7 @@
    Premium Three.js 3D Backgrounds — immersive, fluid, atmospheric
    ================================================================ */
 import * as THREE from 'three';
-import './style.css';
+
 // ════ CURSOR ════════════════════════════════════════════════
 const cur = document.getElementById('cursor');
 const curRing = document.getElementById('cursor-ring');
