@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="nav-closed">
+<body>
 
   <!-- AMBIENT FLOATING PARTICLES -->
   <div class="ambient-particles"></div>
@@ -20,8 +20,8 @@
     <div class="pl-inner">
       <div class="pl-hex-wrap">
         <svg viewBox="0 0 100 100" width="70" height="70">
-          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" stroke="#00d4ff" stroke-width="1.5" fill="none" class="pl-poly"/>
-          <text x="50" y="57" text-anchor="middle" fill="#00d4ff" font-family="Space Mono" font-size="20" font-weight="700">MV</text>
+          <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" stroke="#06d6f2" stroke-width="1.5" fill="none" class="pl-poly"/>
+          <text x="50" y="57" text-anchor="middle" fill="#06d6f2" font-family="Space Mono" font-size="20" font-weight="700">MV</text>
         </svg>
       </div>
       <div class="pl-bar-track"><div class="pl-bar-fill" id="pl-bar"></div></div>
@@ -33,28 +33,28 @@
   <div id="cursor"></div>
   <div id="cursor-ring"></div>
 
-  <!-- NAVIGATION -->
-  <button id="nav-open-btn" class="nav-open-btn">
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="nav">
-    <div class="nav-header">
-      <a class="nav-logo" href="#hero">K. MANI VIGNESH</a>
-      <button id="nav-close-btn" class="nav-close-btn">✕</button>
+  <!-- ════════════════════════════════════════════
+       TOP NAVIGATION BAR
+  ════════════════════════════════════════════ -->
+  <header id="topnav" class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="#hero" id="topnav-logo">MV</a>
+      <nav class="topnav-links" id="topnav-links">
+        <a href="#about" data-section="about">About</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#publications" data-section="publications">Publications</a>
+        <a href="#certifications" data-section="certifications">Certifications</a>
+        <a href="#contact" data-section="contact">Contact</a>
+      </nav>
+      <div class="topnav-right">
+        <a class="topnav-gh" href="https://github.com/kmanivignesh" target="_blank" id="topnav-github">GitHub ↗</a>
+        <button class="topnav-ham" id="topnav-ham" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-footer">
-      <a class="nav-gh" href="https://github.com/kmanivignesh" target="_blank" id="nav-github">GitHub ↗</a>
-    </div>
-    <button class="hamburger" id="ham"><span></span><span></span><span></span></button>
-  </nav>
+  </header>
 
   <!-- MOBILE MENU -->
   <div class="mob-menu" id="mob-menu">
@@ -73,7 +73,6 @@
   <main class="main-content">
   <section id="hero">
     <canvas id="hero-canvas"></canvas>
-    <!-- Overlay to dim canvas so text is readable -->
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-kicker" id="hk">B.Tech CSE (AI) &nbsp;·&nbsp; Amrita Vishwa Vidyapeetham &nbsp;·&nbsp; CGPA 8.87/10</p>
@@ -216,37 +215,37 @@
       <h2 class="sec-title reveal">My <span class="accent">Tech Stack</span></h2>
       <div class="skills-grid">
 
-        <div class="skill-box">
+        <div class="skill-box" data-accent="cyan">
           <div class="sb-icon">⚙️</div>
           <h3>Languages</h3>
           <div class="pills"><span>Python</span><span>Java</span><span>JavaScript</span><span>SQL</span></div>
         </div>
 
-        <div class="skill-box">
+        <div class="skill-box" data-accent="blue">
           <div class="sb-icon">🌐</div>
           <h3>Web Technologies</h3>
           <div class="pills"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>Django</span><span>HTML5</span><span>CSS3</span><span>REST APIs</span><span>JWT</span></div>
         </div>
 
-        <div class="skill-box">
+        <div class="skill-box" data-accent="purple">
           <div class="sb-icon">🤖</div>
           <h3>AI / Machine Learning</h3>
           <div class="pills"><span>Scikit-learn</span><span>TensorFlow</span><span>PyTorch</span><span>HuggingFace</span><span>OpenCV</span><span>Pandas</span><span>NumPy</span><span>YOLO</span></div>
         </div>
 
-        <div class="skill-box">
+        <div class="skill-box" data-accent="green">
           <div class="sb-icon">🗄️</div>
           <h3>Databases</h3>
           <div class="pills"><span>MongoDB</span><span>SQL</span><span>Oracle</span><span>SQLite</span></div>
         </div>
 
-        <div class="skill-box">
+        <div class="skill-box" data-accent="amber">
           <div class="sb-icon">☁️</div>
           <h3>Cloud & DevOps</h3>
           <div class="pills"><span>AWS (Foundations)</span><span>Docker</span><span>Git/GitHub</span><span>Postman</span><span>VS Code</span></div>
         </div>
 
-        <div class="skill-box">
+        <div class="skill-box" data-accent="rose">
           <div class="sb-icon">💡</div>
           <h3>Core Concepts</h3>
           <div class="pills"><span>OOP</span><span>DSA</span><span>IoT Systems</span><span>NLP</span><span>Computer Vision</span><span>Explainable AI</span></div>
@@ -284,12 +283,12 @@
         <div class="proj-cards-grid">
 
           <!-- YuktiJobs -->
-          <div class="proj-card" data-cat="fullstack">
+          <div class="proj-card" data-cat="fullstack" data-color="cyan">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">01</div>
               <div class="pc-date">Nov 2025</div>
             </div>
-            <div class="pc-glow cyan"></div>
             <h3 class="pc-title">YuktiJobs — Job Portal</h3>
             <p class="pc-desc">A full-stack MERN job portal with live job feeds via RapidAPI. Supports both recruiter and job seeker roles with OTP-based authentication, JWT security, and a skill-based recommendation engine.</p>
             <ul class="pc-bullets">
@@ -305,12 +304,12 @@
           </div>
 
           <!-- Zero Waste -->
-          <div class="proj-card" data-cat="fullstack">
+          <div class="proj-card" data-cat="fullstack" data-color="green">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">02</div>
               <div class="pc-date">May 2025</div>
             </div>
-            <div class="pc-glow green"></div>
             <h3 class="pc-title">Zero Waste — Food Donation Platform</h3>
             <p class="pc-desc">A Django-based platform connecting food donors with NGOs to reduce surplus wastage. Includes an ML regression model for urgency scoring and an Explainable AI chatbot for scheduling transparency.</p>
             <ul class="pc-bullets">
@@ -326,12 +325,12 @@
           </div>
 
           <!-- InfoSphere -->
-          <div class="proj-card" data-cat="fullstack">
+          <div class="proj-card" data-cat="fullstack" data-color="purple">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">03</div>
               <div class="pc-date">2024</div>
             </div>
-            <div class="pc-glow purple"></div>
             <h3 class="pc-title">InfoSphere — News Aggregator</h3>
             <p class="pc-desc">A clean, responsive news aggregator that fetches and displays categorized news from multiple sources using public APIs. Features category filtering, live search, and a card-based layout.</p>
             <ul class="pc-bullets">
@@ -357,12 +356,12 @@
         <div class="proj-cards-grid">
 
           <!-- GrievAI -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="cyan">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">04</div>
               <div class="pc-date">2024</div>
             </div>
-            <div class="pc-glow cyan"></div>
             <h3 class="pc-title">GrievAI — Grievance NLP System</h3>
             <p class="pc-desc">End-to-end NLP platform that auto-classifies citizen complaints to 8 government departments with ~91% accuracy using fine-tuned DistilBERT trained on 50K Twitter complaints.</p>
             <ul class="pc-bullets">
@@ -378,12 +377,12 @@
           </div>
 
           <!-- AgriFusionNet -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="green">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">05</div>
               <div class="pc-date">2024</div>
             </div>
-            <div class="pc-glow green"></div>
             <h3 class="pc-title">AgriFusionNet — Paddy Disease Detection</h3>
             <p class="pc-desc">Attention-enhanced multi-modal fusion framework classifying 13 paddy leaf disease classes using DenseNet201 + agronomic metadata achieving 89.17% accuracy with Squeeze-and-Excitation attention blocks.</p>
             <ul class="pc-bullets">
@@ -399,12 +398,12 @@
           </div>
 
           <!-- Smart Image Cleanup -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="amber">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">06</div>
               <div class="pc-date">2025</div>
             </div>
-            <div class="pc-glow orange"></div>
             <div class="pc-ieee-badge">📄 EAI IC4S 2025</div>
             <h3 class="pc-title">Smart Image Cleanup Tool</h3>
             <p class="pc-desc">AI-driven image management system using perceptual hashing, Laplacian variance, and face recognition (OpenCV, Dlib) for automated duplicate detection, blur filtering, and organization. Published at EAI IC4S 2025.</p>
@@ -421,12 +420,12 @@
           </div>
 
           <!-- Water Quality Predictor -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="blue">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">07</div>
               <div class="pc-date">2024</div>
             </div>
-            <div class="pc-glow cyan"></div>
             <h3 class="pc-title">Water Quality Predictor Pro</h3>
             <p class="pc-desc">ML pipeline that predicts water potability using multiple classifiers (Random Forest, SVM, XGBoost, Logistic Regression). Features comprehensive EDA, feature engineering, and model comparison with accuracy benchmarks.</p>
             <ul class="pc-bullets">
@@ -442,12 +441,12 @@
           </div>
 
           <!-- Groundwater PySpark -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="cyan">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">07.5</div>
               <div class="pc-date">2026</div>
             </div>
-            <div class="pc-glow blue"></div>
             <h3 class="pc-title">Groundwater Risk Analysis (PySpark)</h3>
             <p class="pc-desc">Large-scale data analysis pipeline predicting groundwater depletion and contamination risks in vulnerable regions using PySpark. Handles massive geographical datasets for actionable environmental insights.</p>
             <ul class="pc-bullets">
@@ -473,12 +472,12 @@
         <div class="proj-cards-grid">
 
           <!-- Smart Water Surveillance -->
-          <div class="proj-card featured" data-cat="iot">
+          <div class="proj-card featured" data-cat="iot" data-color="blue">
+            <div class="pc-accent"></div>
             <div class="pc-top">
               <div class="pc-num">08</div>
               <div class="pc-date">May 2025</div>
             </div>
-            <div class="pc-glow blue"></div>
             <div class="pc-ieee-badge">🏆 IEEE INSPECT 2025 — ABV-IIITM Gwalior</div>
             <h3 class="pc-title">Smart Water Surveillance System</h3>
             <p class="pc-desc">An IoT-based system monitoring water quality in real-time using sensors and ThingSpeak cloud integration. A Random Forest classifier achieves <strong>97.2% accuracy</strong> detecting contamination. Presented at IEEE INSPECT 2025.</p>
@@ -503,9 +502,9 @@
         <div class="proj-cards-grid">
 
           <!-- NotepadPro -->
-          <div class="proj-card" data-cat="fullstack">
+          <div class="proj-card" data-cat="fullstack" data-color="purple">
+            <div class="pc-accent"></div>
             <div class="pc-top"><div class="pc-num">09</div><div class="pc-date">2024</div></div>
-            <div class="pc-glow cyan"></div>
             <h3 class="pc-title">NotepadPro — Huffman Compressor</h3>
             <p class="pc-desc">A feature-rich Java Swing notepad with built-in Huffman encoding for lossless text compression and FreeTTS for text-to-speech conversion.</p>
             <ul class="pc-bullets">
@@ -519,9 +518,9 @@
           </div>
 
           <!-- Viral Gene Prediction -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="rose">
+            <div class="pc-accent"></div>
             <div class="pc-top"><div class="pc-num">10</div><div class="pc-date">2025</div></div>
-            <div class="pc-glow purple"></div>
             <h3 class="pc-title">Viral Gene Prediction</h3>
             <p class="pc-desc">Bioinformatics deep learning pipeline predicting viral gene functions using Graph Neural Networks (GNN) and DNABERT for DNA sequence encoding and classification.</p>
             <ul class="pc-bullets">
@@ -535,9 +534,9 @@
           </div>
 
           <!-- Workplace Safety -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="amber">
+            <div class="pc-accent"></div>
             <div class="pc-top"><div class="pc-num">11</div><div class="pc-date">2025</div></div>
-            <div class="pc-glow orange"></div>
             <h3 class="pc-title">Workplace Safety Detection (YOLO)</h3>
             <p class="pc-desc">Real-time workplace safety compliance system using YOLOv8 to detect PPE (helmets, vests, gloves) violations in industrial environments with live camera feed integration.</p>
             <ul class="pc-bullets">
@@ -551,9 +550,9 @@
           </div>
 
           <!-- Telugu Fake Review -->
-          <div class="proj-card" data-cat="ai">
+          <div class="proj-card" data-cat="ai" data-color="green">
+            <div class="pc-accent"></div>
             <div class="pc-top"><div class="pc-num">12</div><div class="pc-date">2025</div></div>
-            <div class="pc-glow green"></div>
             <h3 class="pc-title">Telugu Fake Review Detection</h3>
             <p class="pc-desc">NLP-based system to detect fake/spam reviews written in Telugu using transformer fine-tuning. Handles Indic language-specific challenges like code-mixing and transliteration.</p>
             <ul class="pc-bullets">

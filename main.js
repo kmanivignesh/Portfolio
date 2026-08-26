@@ -1209,13 +1209,16 @@ document.addEventListener('keydown', e => {
 // Terminal commands logic
 const COMMANDS = {
   help: () => `Available commands:
-  - <b>about</b>: Learn more about me.
+  - <b>whoami</b>: Learn more about me.
+  - <b>college</b>: My education details.
   - <b>skills</b>: View my technical skills.
   - <b>projects</b>: Check out my work.
+  - <b>publications</b>: My research papers.
   - <b>contact</b>: Get my contact information.
   - <b>resume</b>: View or download my resume.
   - <b>clear</b>: Clear the terminal.`,
-  about: () => `I am K. Mani Vignesh, a Full-Stack Developer & AI-ML Engineer studying at Amrita Vishwa Vidyapeetham.`,
+  whoami: () => `I am K. Mani Vignesh, a Full-Stack Developer & AI-ML Engineer.`,
+  college: () => `I am currently studying B.Tech CSE (Artificial Intelligence) at Amrita Vishwa Vidyapeetham, Bengaluru with a CGPA of 8.87/10.`,
   skills: () => `Languages: Python, Java, JavaScript, SQL
 Web: React, Node.js, Express, Django, HTML/CSS
 AI/ML: Scikit-learn, TensorFlow, PyTorch, YOLO
@@ -1227,6 +1230,8 @@ Cloud: AWS, Docker, Git`,
 - GrievAI (Grievance NLP System)
 - AgriFusionNet (Paddy Disease Detection)
 ...and more! Type 'help' for other commands.`,
+  publications: () => `1. "Smart Water Surveillance System for Critical Points in Food Industry Using IoT and Machine Learning" (IEEE INSPECT 2025)
+2. "Smart Image Cleanup Tool: An AI-Driven Solution for Efficient Image Management" (EAI IC4S 2025)`,
   contact: () => `Email: kmvignesh2005@gmail.com
 LinkedIn: mani-vignesh-kothuri
 GitHub: kmanivignesh`,
